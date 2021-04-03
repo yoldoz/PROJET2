@@ -4,13 +4,21 @@ import java.time.LocalDate;
 public class Emprunt {
 
     private int id;
-    private com.ensta.librarymanager.model.Membre membre;
-    private com.ensta.librarymanager.model.Livre livre;
+    private Membre membre;
+    private Livre livre;
     private LocalDate dateEmprunt;
     private LocalDate dateRetour;
 
     //constructeur
     public Emprunt(){}
+
+    public Emprunt(int id, Membre membre, Livre livre, LocalDate dateEmprunt, LocalDate dateRetour){
+        this.id=id;
+        this.membre=membre;
+        this.livre=livre;
+        this.dateEmprunt=dateEmprunt;
+        this.dateRetour=dateRetour;
+    }
 
     //getters
 
@@ -19,11 +27,11 @@ public class Emprunt {
         return id;
     }
 
-    public com.ensta.librarymanager.model.Membre getMembre() {
+    public Membre getMembre() {
         return membre;
     }
 
-    public com.ensta.librarymanager.model.Livre getLivre() {
+    public Livre getIdLivre() {
         return livre;
     }
 
@@ -41,11 +49,11 @@ public class Emprunt {
         this.id = id;
     }
 
-    public void setMembre(com.ensta.librarymanager.model.Membre membre) {
+    public void setMembre(Membre membre) {
         this.membre = membre;
     }
 
-    public void setLivre(com.ensta.librarymanager.model.Livre livre) {
+    public void setLivre(Livre livre) {
         this.livre = livre;
     }
 
@@ -61,8 +69,8 @@ public class Emprunt {
     public String toString() {
         return "Emprunt{" +
                 "id=" + id +
-                ", Membre=" + membre +
-                ", Livre=" + livre +
+                ", membre=" + membre +
+                ", livre=" + livre +
                 ", dateEmprunt=" + dateEmprunt +
                 ", dateRetour=" + dateRetour +
                 '}';

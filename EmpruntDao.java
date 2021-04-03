@@ -6,8 +6,6 @@ import com.ensta.librarymanager.model.Emprunt;
 import java.time.LocalDate;
 import java.util.List;
 
-import com.ensta.librarymanager.exception.DaoException;
-import com.ensta.librarymanager.model.Emprunt;
 
 public interface EmpruntDao {
 	 List<Emprunt> getList() throws DaoException;
